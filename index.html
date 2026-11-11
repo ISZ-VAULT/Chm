@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#0a0a0a">
-<title>مظاهر الحياة العقلية للعرب في العصر الجاهلي | الشماع محمد</title>
+<title>مظاهر الحياة العقلية للعرب في العصر الجاهلي | الشماع محمد والشماع مؤيد</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa:wght@400;700&family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
@@ -32,7 +32,9 @@ p+p{margin-top:1rem}
 }
 .nav.hidden { transform: translateY(-100%); }
 .nav-in{max-width:1180px;margin:auto;padding:.8rem 1.25rem;display:flex;align-items:center;justify-content:space-between;gap:1rem}
+.brand-group {display: flex; align-items: center; gap: 10px;}
 .brand{font-family:var(--head);font-size:1.4rem;color:var(--gold);font-weight:700;}
+.brand-sub{font-family:var(--body);font-size:0.9rem;color:var(--em);font-weight:700; border-right: 1px solid var(--line); padding-right: 10px;}
 .menu{display:flex;gap:1.8rem;list-style:none}
 .menu a{font-size:1rem;color:var(--text);font-weight:500;padding:.3rem 0;border-bottom:2px solid transparent;transition:.3s}
 .menu a:hover{color:var(--em);border-color:var(--em)}
@@ -48,9 +50,21 @@ body { padding-top: 70px; }
 .hero-title{font-family:var(--head);font-size:clamp(2.2rem,4.5vw,3.8rem);line-height:1.5;color:var(--gold);font-weight:700;text-shadow:0 4px 20px rgba(0,0,0,0.6);}
 .hero-title .w{display:inline-block}
 .lead{margin-top:1.2rem;max-width:34rem;font-size:1.2rem;color:#d1d5db;}
-.author{border-inline-start:2px solid var(--gold);padding:.5rem 1.5rem;background:rgba(0,0,0,0.3);backdrop-filter:blur(5px);border-radius:8px;}
-.author small{display:block;color:var(--em);font-size:.95rem;font-weight:700;letter-spacing:1px;}
-.author strong{display:block;font-family:var(--head);font-size:clamp(1.8rem,3vw,2.5rem);color:#fff;line-height:1.5;font-weight:700}
+
+/* صندوق فريق العمل */
+.author-box {
+  border-inline-start: 2px solid var(--gold);
+  padding: 1rem 1.5rem;
+  background: rgba(0,0,0,0.3);
+  backdrop-filter: blur(5px);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.author-item small{display:block;color:var(--em);font-size:.9rem;font-weight:700;letter-spacing:1px;margin-bottom: 0.2rem;}
+.author-item strong{display:block;font-family:var(--head);font-size:clamp(1.4rem,2.5vw,2rem);color:#fff;line-height:1.2;font-weight:700}
+.author-item span{display:block;font-family:var(--body);font-size:0.85rem;color:var(--muted);margin-top: 0.3rem;}
 
 /* STAR BORDER BUTTON */
 .star-border{position:relative;display:inline-block;overflow:hidden;border-radius:50px;padding:2px;margin-top:2.5rem;background:linear-gradient(90deg, transparent, var(--em), transparent);background-size:200% 100%;animation:borderAnim 3s linear infinite;}
@@ -134,15 +148,23 @@ section:not(.hero){padding:clamp(4rem,8vw,7rem) 1.25rem}
 /* FOOTER */
 .footer{border-top:1px solid var(--line);text-align:center;padding:4rem 1.25rem;background:#050505;}
 .footer p{color:var(--muted);font-size:1.1rem;}
-.footer strong{display:block;font-family:var(--head);font-size:2.5rem;color:var(--gold);margin:.5rem 0 1rem}
-.footer small{font-size:.95rem;color:#666;}
+.footer .team-footer {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin: 1.5rem 0 2rem;
+}
+.footer strong{display:block;font-family:var(--head);font-size:2.2rem;color:var(--gold);margin-bottom:.2rem}
+.footer small{display:block;font-size:.95rem;color:#666;}
 
 /* RESPONSIVE */
 @media(max-width:900px){
-  .nav-in{flex-direction:column;gap:1rem;padding:1rem;}
+  .nav-in{flex-direction:column;gap:0.8rem;padding:1rem;}
+  .brand-group {flex-direction: column; gap: 2px; text-align: center;}
+  .brand-sub {border-right: none; border-top: 1px solid var(--line); padding-right: 0; padding-top: 5px;}
   .menu{flex-wrap:wrap;justify-content:center;gap:1rem;}
   .hero-in{grid-template-columns:1fr;padding-top:4rem;gap:2rem;text-align:center;}
-  .author{border-inline-start:0;border-top:2px solid var(--gold);padding:1rem 0 0;background:none;}
+  .author-box{border-inline-start:0;border-top:2px solid var(--gold);padding:1rem 0 0;background:none; align-items: center;}
   .asym,.poems,.cards{grid-template-columns:1fr}
   .facts{grid-template-columns:1fr}
   .hero-title{font-size:2.2rem;}
@@ -158,7 +180,11 @@ section:not(.hero){padding:clamp(4rem,8vw,7rem) 1.25rem}
 
 <header class="nav" id="navbar">
   <div class="nav-in">
-    <a href="#top" class="brand">الشماع محمد</a>
+    <!-- تحديث الشريط العلوي -->
+    <div class="brand-group">
+      <a href="#top" class="brand">الشماع محمد</a>
+      <span class="brand-sub">والشماع مؤيد</span>
+    </div>
     <ul class="menu">
       <li><a href="#intro">العصر الجاهلي</a></li>
       <li><a href="#poetry">الشعر</a></li>
@@ -179,9 +205,18 @@ section:not(.hero){padding:clamp(4rem,8vw,7rem) 1.25rem}
       <p class="lead">رحلة في متحف رقمي نتأمل فيها كيف أنتجت صحراءٌ بلا كتب شعرًا خالدًا، وأمثالًا باقية، وعلمًا بالنجوم والأثر والنسب.</p>
       <a href="#intro" class="star-border"><span class="in">ابدأ الجولة</span></a>
     </div>
-    <div class="author">
-      <small>تصميم وتطوير</small>
-      <strong>الشماع محمد</strong>
+    
+    <!-- فريق العمل -->
+    <div class="author-box">
+      <div class="author-item">
+        <small>تصميم وتطوير</small>
+        <strong>الشماع محمد</strong>
+      </div>
+      <div class="author-item">
+        <small>المسؤول عن المصادر</small>
+        <strong>الشماع مؤيد</strong>
+        <span style="font-size:0.8rem; color:var(--em); opacity:0.8;">(إعداد وتوثيق المحتوى)</span>
+      </div>
     </div>
   </div>
 </section>
@@ -305,7 +340,19 @@ section:not(.hero){padding:clamp(4rem,8vw,7rem) 1.25rem}
 
 <footer class="footer">
   <p>صُمِّم وطُوِّر بكل عناية بواسطة</p>
-  <strong>الشماع محمد</strong>
+  
+  <!-- أسماء الفريق في التذييل -->
+  <div class="team-footer">
+    <div>
+      <strong>الشماع محمد</strong>
+      <small>المصمم والمطور</small>
+    </div>
+    <div>
+      <strong>الشماع مؤيد</strong>
+      <small>المسؤول عن المصادر</small>
+    </div>
+  </div>
+
   <small>مظاهر الحياة العقلية للعرب في العصر الجاهلي</small>
 </footer>
 
