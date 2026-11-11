@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#0a0a0a">
+<title>مظاهر الحياة العقلية للعرب في العصر الجاهلي | الشماع محمد</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa:wght@400;700&family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#0a0a0a; --surface:#121413; --gold:#d4af37; --line:rgba(212,175,55,.25);
+  --em:#10b981; --text:#ebe8e1; --muted:#a6aca8; --head:'Aref Ruqaa',serif; --body:'Tajawal',sans-serif;
+}
+html{scroll-behavior:smooth; scroll-padding-top:80px;}
+body{background:var(--bg);color:var(--text);font-family:var(--body);font-size:1.1rem;line-height:1.8;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+h2,h3{font-family:var(--head);color:var(--gold);font-weight:700;line-height:1.4}
+h2{font-size:clamp(1.8rem,3.2vw,2.6rem);margin-bottom:1rem}
+h3{font-size:1.5rem}
+p+p{margin-top:1rem}
+
+/* ================= NAVBAR ================= */
+.nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 50;
+  background: rgba(10,10,10,.95); backdrop-filter: blur(15px);
+  border-bottom: 1px solid var(--line);
+  transition: transform 0.4s ease;
+}
+.nav.hidden { transform: translateY(-100%); }
+.nav-in{max-width:1180px;margin:auto;padding:.8rem 1.25rem;display:flex;align-items:center;justify-content:space-between;gap:1rem}
+.brand{font-family:var(--head);font-size:1.4rem;color:var(--gold);font-weight:700;}
+.menu{display:flex;gap:1.8rem;list-style:none}
+.menu a{font-size:1rem;color:var(--text);font-weight:500;padding:.3rem 0;border-bottom:2px solid transparent;transition:.3s}
+.menu a:hover{color:var(--em);border-color:var(--em)}
+body { padding-top: 70px; }
+
+/* ================= HERO ================= */
+.hero{position:relative;min-height:85svh;display:grid;align-items:center;overflow:hidden;isolation:isolate; margin-top:-70px; padding-top:70px;
+  background: radial-gradient(circle at 50% 0%, #113a30 0%, #0a0a0a 70%);
+}
+.hero-shade{position:absolute;inset:0;z-index:-2;background:linear-gradient(180deg,transparent,rgba(10,10,10,.8) 80%,var(--bg))}
+#rays{position:absolute;inset:0;width:100%;height:100%;z-index:-1;opacity:.6;mix-blend-mode:screen;filter:blur(10px);pointer-events:none}
+.hero-in{width:100%;max-width:1180px;margin:auto;padding:2rem 1.25rem;display:grid;grid-template-columns:1.8fr 1fr;gap:3rem;align-items:center}
+.hero-title{font-family:var(--head);font-size:clamp(2.2rem,4.5vw,3.8rem);line-height:1.5;color:var(--gold);font-weight:700;text-shadow:0 4px 20px rgba(0,0,0,0.6);}
+.hero-title .w{display:inline-block}
+.lead{margin-top:1.2rem;max-width:34rem;font-size:1.2rem;color:#d1d5db;}
+.author{border-inline-start:2px solid var(--gold);padding:.5rem 1.5rem;background:rgba(0,0,0,0.3);backdrop-filter:blur(5px);border-radius:8px;}
+.author small{display:block;color:var(--em);font-size:.95rem;font-weight:700;letter-spacing:1px;}
+.author strong{display:block;font-family:var(--head);font-size:clamp(1.8rem,3vw,2.5rem);color:#fff;line-height:1.5;font-weight:700}
+
+/* STAR BORDER BUTTON */
+.star-border{position:relative;display:inline-block;overflow:hidden;border-radius:50px;padding:2px;margin-top:2.5rem;background:linear-gradient(90deg, transparent, var(--em), transparent);background-size:200% 100%;animation:borderAnim 3s linear infinite;}
+@keyframes borderAnim {0%{background-position:100% 0}100%{background-position:-100% 0}}
+.star-border .in{position:relative;z-index:1;display:block;background:#0a0a0a;border-radius:50px;padding:1rem 2.5rem;color:#fff;font-weight:700;font-size:1.1rem;transition:.3s;}
+.star-border:hover .in{background:var(--em);color:#000;}
+
+/* ================= SECTIONS ================= */
+section:not(.hero){padding:clamp(4rem,8vw,7rem) 1.25rem}
+.band{background:var(--surface);border-block:1px solid var(--line)}
+.wrap{max-width:1180px;margin:auto}
+.head{margin-bottom:2.5rem}
+.sub{max-width:42rem;color:var(--muted);font-size:1.1rem;line-height:1.8}
+.tag{display:inline-block;color:var(--em);border:1px solid var(--em);border-radius:99px;padding:.2rem 1.2rem;font-size:.95rem;font-weight:700;margin-bottom:1rem;background:rgba(16,185,129,0.1)}
+.asym{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,5vw,4.5rem);align-items:center}
+.asym p{max-width:36rem;color:#d1d5db;font-size:1.1rem;line-height:1.9}
+
+/* صور حقيقية بإطارات أنيقة */
+.frame {
+  position: relative;
+  border-radius: 16px;
+  border: 1px solid var(--line);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+  overflow: hidden;
+  background: var(--surface);
+}
+.frame img {
+  width: 100%; height: 100%; object-fit: cover;
+  transition: transform 0.8s ease, filter 0.5s ease;
+  filter: sepia(0.2) contrast(1.1) brightness(0.9);
+}
+.frame:hover img {
+  transform: scale(1.05);
+  filter: sepia(0) contrast(1.2) brightness(1);
+}
+
+/* FACTS */
+.facts{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:2.5rem}
+.facts div{border:1px solid var(--line);border-radius:12px;padding:1.2rem;background:rgba(255,255,255,0.02);transition:.3s;}
+.facts div:hover{border-color:var(--gold);background:rgba(212,175,55,0.05);transform:translateY(-3px);}
+.facts b{display:block;font-family:var(--head);font-size:1.3rem;color:var(--gold);margin-bottom:.3rem;}
+.facts span{display:block;font-size:.95rem;color:var(--muted);line-height:1.6}
+
+/* POETRY */
+.poems{display:grid;grid-template-columns:1fr 1fr;gap:2rem}
+.verse{background:var(--bg);border:1px solid var(--line);border-top:3px solid var(--em);border-radius:16px;padding:2.5rem 2rem;text-align:center;transition:.3s;}
+.verse:hover{border-color:var(--em);}
+.poet{color:var(--muted);font-size:1rem;font-weight:700;}
+.verse blockquote{font-family:var(--head);font-size:clamp(1.4rem,2.5vw,1.9rem);line-height:2.2;margin:1rem 0 1.5rem;color:#fff;}
+.verse blockquote span{display:block}
+.purpose{display:inline-block;background:var(--em);color:#04130d;border-radius:99px;padding:.2rem 1.2rem;font-size:.95rem;font-weight:800}
+.explain{margin-top:1rem;border:1px solid var(--line);border-radius:16px;padding:1.5rem;background:rgba(255,255,255,0.02);}
+.explain h3{font-size:1.4rem;margin-bottom:.5rem;color:var(--gold);font-family:var(--head);}
+.explain p{font-size:1.05rem;color:var(--muted);line-height:1.9;}
+.purposes{display:flex;flex-wrap:wrap;gap:.8rem;margin-top:2.5rem;justify-content:center;}
+.purposes span{border:1px solid var(--line);border-radius:99px;padding:.3rem 1.2rem;font-size:1rem;font-weight:500;transition:.3s;}
+.purposes span:hover{background:var(--gold);color:#000;border-color:var(--gold);}
+
+/* PROVERBS */
+.proverbs{display:grid;gap:1rem}
+.pv{border:1px solid var(--line);border-radius:16px;background:rgba(255,255,255,0.02);transition:border-color .3s;}
+.pv.open{border-color:var(--em);}
+.pv button{all:unset;box-sizing:border-box;width:100%;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:1rem;padding:1.5rem;font-family:var(--head);font-size:1.5rem;font-weight:700;color:var(--gold);border-radius:16px}
+.pv button::after{content:"+";font-family:var(--body);font-size:1.8rem;color:var(--em);transition:transform .3s}
+.pv.open button::after{transform:rotate(45deg)}
+.pv-body{display:grid;grid-template-rows:0fr;transition:grid-template-rows .4s ease}
+.pv.open .pv-body{grid-template-rows:1fr}
+.pv-body>div{overflow:hidden}
+.pv-body p{padding:0 1.5rem 1.5rem;font-size:1.05rem;color:var(--muted);line-height:1.9;}
+.pv-body em{color:var(--em);font-style:normal;font-weight:700}
+
+/* CARDS */
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;align-items:start}
+.card{background:rgba(255,255,255,0.02);border:1px solid var(--line);border-radius:16px;overflow:hidden;transition:border-color .3s,transform .3s;}
+.card:hover{border-color:var(--em);transform:translateY(-5px);box-shadow:0 10px 30px rgba(16,185,129,0.1);}
+.card .frame {border:0;border-radius:0;border-bottom:1px solid var(--line);box-shadow:none; height: 200px;}
+.card-body{padding:1.5rem}
+.card-body h3{color:var(--gold);margin-bottom:.5rem;}
+.card-body p{font-size:1.05rem;color:var(--muted);line-height:1.9;}
+
+/* FOOTER */
+.footer{border-top:1px solid var(--line);text-align:center;padding:4rem 1.25rem;background:#050505;}
+.footer p{color:var(--muted);font-size:1.1rem;}
+.footer strong{display:block;font-family:var(--head);font-size:2.5rem;color:var(--gold);margin:.5rem 0 1rem}
+.footer small{font-size:.95rem;color:#666;}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+  .nav-in{flex-direction:column;gap:1rem;padding:1rem;}
+  .menu{flex-wrap:wrap;justify-content:center;gap:1rem;}
+  .hero-in{grid-template-columns:1fr;padding-top:4rem;gap:2rem;text-align:center;}
+  .author{border-inline-start:0;border-top:2px solid var(--gold);padding:1rem 0 0;background:none;}
+  .asym,.poems,.cards{grid-template-columns:1fr}
+  .facts{grid-template-columns:1fr}
+  .hero-title{font-size:2.2rem;}
+  section:not(.hero){padding:4rem 1.25rem}
+}
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{transition-duration:.01ms!important;animation:none!important}
+  #rays{display:none}
+}
+</style>
+</head>
+<body>
+
+<header class="nav" id="navbar">
+  <div class="nav-in">
+    <a href="#top" class="brand">الشماع محمد</a>
+    <ul class="menu">
+      <li><a href="#intro">العصر الجاهلي</a></li>
+      <li><a href="#poetry">الشعر</a></li>
+      <li><a href="#wisdom">الحكمة</a></li>
+      <li><a href="#mind">الحياة العقلية</a></li>
+    </ul>
+  </div>
+</header>
+
+<main>
+<!-- HERO -->
+<section class="hero" id="top">
+  <div class="hero-shade"></div>
+  <canvas id="rays" aria-hidden="true"></canvas>
+  <div class="hero-in">
+    <div>
+      <h1 class="hero-title" id="heroTitle">مظاهر الحياة العقلية للعرب في العصر الجاهلي</h1>
+      <p class="lead">رحلة في متحف رقمي نتأمل فيها كيف أنتجت صحراءٌ بلا كتب شعرًا خالدًا، وأمثالًا باقية، وعلمًا بالنجوم والأثر والنسب.</p>
+      <a href="#intro" class="star-border"><span class="in">ابدأ الجولة</span></a>
+    </div>
+    <div class="author">
+      <small>تصميم وتطوير</small>
+      <strong>الشماع محمد</strong>
+    </div>
+  </div>
+</section>
+
+<!-- INTRO -->
+<section id="intro">
+  <div class="wrap" data-reveal>
+    <div class="asym">
+      <div>
+        <span class="tag">مدخل</span>
+        <h2>العصر الجاهلي: عقلٌ يعمل بلا دواوين</h2>
+        <p>يُقصد بالعصر الجاهلي المدة التي سبقت ظهور الإسلام بنحو قرن ونصف، وفيها عاش العرب في جزيرتهم بين بادية تتنقل خلف الماء والكلأ، وحواضر تقوم على التجارة مثل مكة والطائف ويثرب.</p>
+        <p>و«الجاهلية» هنا تعني ما كانوا عليه من حال الدين والعصبية، وليست وصفًا لعقولهم. فقد برعوا في الكلام والملاحظة والحفظ، وجعلوا الذاكرة مكتبتهم، واللسان ديوانهم.</p>
+        <div class="facts">
+          <div><b>الشفاهة</b><span>العلم يُنقل بالرواية والحفظ</span></div>
+          <div><b>الأسواق</b><span>عكاظ وذو المجاز ومجنة</span></div>
+          <div><b>القبيلة</b><span>إطار الهوية والذاكرة</span></div>
+        </div>
+      </div>
+      <!-- صورة حقيقية: صحراء -->
+      <div class="frame" style="aspect-ratio:4/3">
+        <img src="https://images.unsplash.com/photo-1509316785289-025f5b846b35?q=80&w=1000&auto=format&fit=crop" alt="صحراء عربية">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- POETRY -->
+<section id="poetry" class="band">
+  <div class="wrap" data-reveal>
+    <div class="head">
+      <span class="tag">ديوان العرب</span>
+      <h2>الشعر: سجلُّ الأمة وصوتها</h2>
+      <p class="sub">كان الشعر أرفع فنون القول، به تُحفظ المفاخر وتُدفع المذمات وتُسجَّل الوقائع. وكانت القبيلة تحتفل بنبوغ شاعر فيها، وتعلّق الأسواق مختاراته.</p>
+    </div>
+    <div class="poems">
+      <article>
+        <div class="verse">
+          <span class="poet">زهير بن أبي سلمى، من معلقته</span>
+          <blockquote><span>وَمَهْما تَكُنْ عِنْدَ امْرِئٍ مِنْ خَلِيقَةٍ</span><span>وَإِنْ خَالَها تَخْفَى عَلَى النَّاسِ تُعْلَمِ</span></blockquote>
+          <span class="purpose">الحكمة</span>
+        </div>
+        <div class="explain"><h3>ما الذي يقوله البيت؟</h3><p>مهما حاول الإنسان إخفاء طبعه، فإن أخلاقه تظهر للناس في النهاية. جعل زهير التجربة الإنسانية قاعدة عامة، فصار بيته حكمة تُستعمل في كل زمان.</p></div>
+      </article>
+      <article>
+        <div class="verse">
+          <span class="poet">عنترة بن شداد، من معلقته</span>
+          <blockquote><span>وَلَقَدْ ذَكَرْتُكِ وَالرِّمَاحُ نَوَاهِلٌ مِنِّي</span><span>وَبِيضُ الهِنْدِ تَقْطُرُ مِنْ دَمِي</span></blockquote>
+          <span class="purpose">الحماسة والغزل</span>
+        </div>
+        <div class="explain"><h3>ما الذي يقوله البيت؟</h3><p>يتذكر الشاعر محبوبته وهو وسط المعركة. يجمع البيت غرضين: الفخر بالشجاعة التي لا تتراجع، والغزل الذي يبقى حاضرًا حتى في أشد اللحظات.</p></div>
+      </article>
+    </div>
+    <div class="purposes" aria-label="أغراض الشعر الجاهلي">
+      <span>الفخر</span><span>الحماسة</span><span>المدح</span><span>الهجاء</span><span>الرثاء</span><span>الغزل</span><span>الوصف</span><span>الحكمة</span>
+    </div>
+  </div>
+</section>
+
+<!-- WISDOM -->
+<section id="wisdom">
+  <div class="wrap" data-reveal>
+    <div class="asym">
+      <div>
+        <div class="head">
+          <span class="tag">خلاصة التجربة</span>
+          <h2>الأمثال: حكمة في كلمات</h2>
+          <p class="sub">المثل جملة قصيرة سائرة، وراءها قصة أو تجربة. اضغط على كل مثل لتقرأ معناه ومناسبته.</p>
+        </div>
+        <div class="proverbs">
+          <div class="pv"><button aria-expanded="false">الصَّيْفَ ضَيَّعْتِ اللَّبَنَ</button>
+            <div class="pv-body"><div><p>يُضرب لمن فرّط في الأمر وقت الحاجة ثم جاء يطلبه بعد فوات الأوان. <em>الدرس:</em> لكل شيء وقته، ومن ضيّع الفرصة لا يملك أن يستعيدها بالندم.</p></div></div></div>
+          <div class="pv"><button aria-expanded="false">عَلَى نَفْسِهَا جَنَتْ بَرَاقِشُ</button>
+            <div class="pv-body"><div><p>يُضرب لمن يجلب الضرر إلى نفسه بيده. وبراقش كلبة كانت تنبح فتدل الغزاة على أهلها. <em>الدرس:</em> بعض الأضرار لا يأتي من عدو خارجي، وإنما من تصرف غير محسوب يصدر منا.</p></div></div></div>
+          <div class="pv"><button aria-expanded="false">عِنْدَ جُهَيْنَةَ الخَبَرُ اليَقِينُ</button>
+            <div class="pv-body"><div><p>يُضرب في الرجوع إلى صاحب العلم الموثوق عند اختلاف الأخبار. <em>الدرس:</em> في زمن كثرة الأقاويل، قيمة الخبر في مصدره، فتحقّق قبل أن تصدّق وتنشر.</p></div></div></div>
+        </div>
+      </div>
+      <!-- صورة حقيقية: مخطوط عربي -->
+      <div class="frame" style="aspect-ratio:4/5">
+        <img src="https://images.unsplash.com/photo-1544383835-bda2bc66a55d?q=80&w=800&auto=format&fit=crop" alt="مخطوط عربي">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MENTAL LIFE -->
+<section id="mind" class="band">
+  <div class="wrap" data-reveal>
+    <div class="head">
+      <span class="tag">علوم الصحراء</span>
+      <h2>الحياة العقلية: ملاحظة دقيقة ومعرفة عملية</h2>
+      <p class="sub">لم تكن للعرب مدارس نظامية، لكن الحاجة علّمتهم علومًا تقوم على المشاهدة الطويلة والخبرة المتوارثة.</p>
+    </div>
+    <div class="cards">
+      <article class="card">
+        <!-- صورة حقيقية: نجوم -->
+        <div class="frame">
+          <img src="https://images.unsplash.com/photo-1462331940025-496dfbfc7564?q=80&w=600&auto=format&fit=crop" alt="سماء ليلية بالنجوم">
+        </div>
+        <div class="card-body"><h3>الأنواء والنجوم</h3><p>راقب العرب مطالع النجوم ومغاربها، وقسّموا السنة إلى ثمانٍ وعشرين منزلة قمرية، وربطوها بالمطر والبرد والحر، فعرفوا وقت الرحيل والزرع وورود المياه.</p></div>
+      </article>
+      <article class="card">
+        <!-- صورة حقيقية: رمال -->
+        <div class="frame">
+          <img src="https://images.unsplash.com/photo-1509316785289-025f5b846b35?q=80&w=600&auto=format&fit=crop" alt="رمال الصحراء">
+        </div>
+        <div class="card-body"><h3>القيافة وقصّ الأثر</h3><p>القيافة معرفة الشبه والأثر. فالقائف يميّز أقدام الناس والإبل على الرمل، ويعرف من آثارها صاحبها واتجاهه وعمره.</p></div>
+      </article>
+      <article class="card">
+        <!-- صورة حقيقية: كتب -->
+        <div class="frame">
+          <img src="https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?q=80&w=600&auto=format&fit=crop" alt="كتب قديمة">
+        </div>
+        <div class="card-body"><h3>علم الأنساب</h3><p>كان النسب بطاقة الهوية: به يُعرف الحليف والعدو، وتُحفظ الحقوق والديات. فحفظوا سلاسل القبائل وبرز النسّابون.</p></div>
+      </article>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="footer">
+  <p>صُمِّم وطُوِّر بكل عناية بواسطة</p>
+  <strong>الشماع محمد</strong>
+  <small>مظاهر الحياة العقلية للعرب في العصر الجاهلي</small>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script>
+(function () {
+  const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const $$ = (s) => [...document.querySelectorAll(s)];
+
+  // Accordion
+  $$('.pv button').forEach((b) => b.addEventListener('click', () => {
+    const open = b.parentElement.classList.toggle('open');
+    b.setAttribute('aria-expanded', open);
+  }));
+
+  // إخفاء وإظهار الـ Navbar
+  let lastScrollY = window.scrollY;
+  const navbar = document.getElementById('navbar');
+  
+  window.addEventListener('scroll', () => {
+    if (lastScrollY < window.scrollY && window.scrollY > 100) {
+      navbar.classList.add('hidden');
+    } else {
+      navbar.classList.remove('hidden');
+    }
+    lastScrollY = window.scrollY;
+  });
+
+  if (reduced || !window.gsap || !window.ScrollTrigger) return;
+
+  gsap.registerPlugin(ScrollTrigger);
+
+  // BlurText
+  const title = document.getElementById('heroTitle');
+  const text = title.textContent.trim();
+  title.innerHTML = text.split(/\s+/).map((w) => `<span class="w">${w}</span>`).join(' ');
+  gsap.fromTo('.hero-title .w',
+    { opacity: 0, filter: 'blur(10px)', y: -20 },
+    { opacity: 1, filter: 'blur(0px)', y: 0, duration: 0.8, stagger: 0.15, delay: 0.2, ease: 'power2.out' });
+
+  // LightRays
+  const cv = document.getElementById('rays'), cx = cv.getContext('2d');
+  let w = 0, h = 0, visible = true;
+  const resize = () => { w = cv.width = cv.clientWidth; h = cv.height = cv.clientHeight; };
+  resize(); addEventListener('resize', resize);
+  new IntersectionObserver(([e]) => { visible = e.isIntersecting; }).observe(cv);
+  const N = 9;
+  (function draw(t) {
+    if (visible) {
+      cx.clearRect(0, 0, w, h);
+      cx.globalCompositeOperation = 'lighter';
+      for (let i = 0; i < N; i++) {
+        const a = -0.9 + i * (1.8 / (N - 1)) + Math.sin(t / 4000 + i) * 0.08;
+        const sp = 0.05 + 0.02 * Math.sin(t / 3000 + i * 2);
+        const len = h * 1.3, x0 = w / 2;
+        const g = cx.createLinearGradient(x0, 0, x0 + Math.sin(a) * len, Math.cos(a) * len);
+        g.addColorStop(0, 'rgba(16,185,129,.35)');
+        g.addColorStop(1, 'rgba(16,185,129,0)');
+        cx.fillStyle = g;
+        cx.beginPath();
+        cx.moveTo(x0, -10);
+        cx.lineTo(x0 + Math.sin(a - sp) * len, Math.cos(a - sp) * len);
+        cx.lineTo(x0 + Math.sin(a + sp) * len, Math.cos(a + sp) * len);
+        cx.closePath(); cx.fill();
+      }
+    }
+    requestAnimationFrame(draw);
+  })(0);
+
+  // Reveal
+  $$('[data-reveal]').forEach((el) => {
+    gsap.fromTo(el, { opacity: 0, y: 50 },
+      { opacity: 1, y: 0, duration: 0.8, ease: 'power2.out',
+        scrollTrigger: { trigger: el, start: 'top 85%', once: true } });
+  });
+
+})();
+</script>
+</body>
+</html>
